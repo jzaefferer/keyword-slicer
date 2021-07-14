@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyword Slicer</title>
+  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+  />
+</head>
+<body>
+  <header><h1>Keyword Slicer</h1></header>
+  <section>
+    <label for="threshold"
+      >Threshold (number of overlapping links out of 10 results to suggest a
+      group)</label
+    >
+    <input type="text" id="threshold" value="6" />
+  </section>
+  <label for="input"
+    >keywords to slice (can contain tab-separated extra data)</label
+  >
+  <br />
+  <textarea id="input" rows="15" cols="40">
+  queen mary 2	6600
+  queen mary 2 hamburg	400
+  queen mary 2 position	250
+  queen mary 2 innen	100
+  queen mary 2 buchen	100
+  queen mary 2 preise	90
+  queen mary 2 schiff	90
+  wann fährt die queen mary 2 an cuxhaven vorbei	80
+  queen mary 2 cuxhaven	60
+  queen mary 2 modell	60
+  queen mary 2 kleiderordnung	60
+  queen mary 2 höhe	60
+  queen mary 2 in hamburg	60
+  queen mary 2 hamburg new york	50
+  queen mary 2 tickets	40
+  queen mary 2 größe	40
+  queen mary 2 hamburg southampton	40
+  queen mary 2 vs titanic	40
+  queen mary 2 suite	40
+  queen mary 2 umbau	40
+  queen mary 2 deckplan	40
+  queen mary 2 kabinenplan	40
+  queen mary 2 länge	30
+  queen mary 2 reisen	30
+  queen mary 2 nebenkosten	30
+  queen mary 2 revell	30
+  queen mary 2 maße	30
+  queen mary 2 kreuzfahrt	30
+  queen mary 2 jobs	30
+  queen mary 2 bewertungen	30
+  queen mary 2 new york	30
+  queen mary 2 route	30
+  queen mary 2 restaurants	30
+  queen mary 2 daten	30
+  wo ist queen mary 2	20
+  queen mary 2 renovierung	20
+  queen mary 2 corona	20
+  queen mary 2 new york hamburg	20
+  queen mary 2 doku	20
+  queen mary 2 balkonkabine	20
+  queen mary 2 innenkabine	20
+  queen mary 2 transatlantik	20
+  queen mary 2 location	20
+  queen mary 2 cunard	20
+  queen mary 2 norwegen	20
+  queen mary 2 von hamburg nach new york	20
+  queen mary 2 dresscode	20
+  queen mary 2 technische daten	20
+  queen mary 2 hunde	20
+  queen mary 2 nach new york	20
+  queen mary 2 angebote	20
+  queen mary 2 getränkepreise	20
+  queen mary 2 tiefgang	20
+  queen mary 2 fahrplan	20
+  queen mary 2 transatlantik erfahrungen	20
+  queen mary 2 geschwindigkeit	20
+  queen mary 2 princess suite	20
+  queen mary 2 gewicht	20
+  queen mary 2 kosten	20
+  queen mary 2 queens suite	10
+  queen mary 2 größenvergleich	10
+  queen mary 2 einzelkabine	10
+  queen mary 2 captain	10
+  queen mary 2 zimmer	10
+  queen mary 2 interior	10
+  queen mary 2 nord ostsee kanal	10
+  queen mary 2 kapitän	10
+  queen mary 2 ab hamburg	10
+  queen mary 2 getränkepaket	10
+  queen mary 2 bilder	10
+  queen mary 2 marinetraffic	10
+  queen mary 2 erfahrungen	10
+  queen mary 2 ps	10
+  queen mary 2 kabinen	10
+  queen mary 2 passagiere	10
+  queen mary 2 lego	10
+  queen mary 2 video	10
+  wo wurde die queen mary 2 gebaut	10
+</textarea
+  >
+  <button id="execute">slice those keywords!</button>
+  <div id="output"></div>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script type="module" src="slicer.js"></script>
+</body>

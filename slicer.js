@@ -3,10 +3,9 @@ async function loadClient() {
   const apiKey =
     localStorage.getItem("search-api-key") ||
     new URLSearchParams(location.search).get("search-api-key");
-  console.log(
-    apiKey,
-    Array.from(new URLSearchParams(location.search).entries())
-  );
+  if (!apiKey) {
+    alert("Missing API key! Call initially with ?search-api-key=[apikey]");
+  }
   localStorage.setItem("search-api-key", apiKey);
   gapi.client.setApiKey(apiKey);
   // map the https://google.github.io/closure-library/api/goog.Thenable.html to a real Promise
